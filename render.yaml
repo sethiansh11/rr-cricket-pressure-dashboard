@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: rr-cricket-pressure-dashboard
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn pressure_dashboard:server
